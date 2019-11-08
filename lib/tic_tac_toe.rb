@@ -13,12 +13,19 @@ class TicTacToe
   ]
   
   
+<<<<<<< HEAD
   
   def initialize(board = nil)
     @board = board || Array.new(9, " ")
   end
   
   
+=======
+  def initialize
+    @board = Array.new(9, " ")
+  end
+  
+>>>>>>> 25a66ae09dfb9feafacb6a4274875c61db8b6e6f
   def display_board
     puts " #{board[0]} | #{board[1]} | #{board[2]} "
     puts "-----------"
@@ -110,7 +117,11 @@ class TicTacToe
   end
   
   def over?
+<<<<<<< HEAD
     if won? || full? || draw?
+=======
+    if won? || full?
+>>>>>>> 25a66ae09dfb9feafacb6a4274875c61db8b6e6f
       return true
     else
       return false
@@ -132,6 +143,7 @@ class TicTacToe
   end
   
   def play 
+<<<<<<< HEAD
     while over? == false
     turn
   end
@@ -139,6 +151,17 @@ class TicTacToe
     puts "Congratulations #{winner}!"
   elsif draw?
     puts "Cat's Game!"
+=======
+    until won? == true || won? != false
+    turn
+  end
+  if winner
+    puts "Congratulations!"
+  elsif draw?
+    puts "Draw!"
+  else
+    return nil
+>>>>>>> 25a66ae09dfb9feafacb6a4274875c61db8b6e6f
   end
   end 
 end 
